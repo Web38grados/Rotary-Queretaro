@@ -1,0 +1,116 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-azure: var(--azure);
+  --color-gold: var(--gold);
+  --color-cranberry: var(--cranberry);
+  --color-cloud: var(--cloud);
+  --font-display: "Open Sans", system-ui, sans-serif;
+  --font-sans: "Open Sans", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  /* Rotary brand */
+  --azure: oklch(0.48 0.18 255);          /* #0050a2 */
+  --royal-blue: oklch(0.36 0.17 264);     /* #17458F */
+  --gold: oklch(0.79 0.16 75);            /* #F7A81B */
+  --cranberry: oklch(0.52 0.21 17);       /* #C10042 */
+  --cloud: oklch(0.93 0.01 90);           /* #E6E5D8 */
+
+  --background: oklch(0.99 0.005 90);
+  --foreground: oklch(0.18 0.04 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 264);
+  --primary: var(--royal-blue);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: var(--gold);
+  --secondary-foreground: oklch(0.18 0.04 264);
+  --muted: oklch(0.95 0.01 250);
+  --muted-foreground: oklch(0.45 0.03 257);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.18 0.04 264);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.01 255);
+  --input: oklch(0.92 0.01 255);
+  --ring: var(--azure);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.36 0.17 264 / 0.92), oklch(0.48 0.18 255 / 0.75));
+  --gradient-gold: linear-gradient(135deg, var(--gold), oklch(0.85 0.13 80));
+  --shadow-elegant: 0 20px 60px -20px oklch(0.36 0.17 264 / 0.35);
+  --shadow-card: 0 8px 30px -12px oklch(0.18 0.04 264 / 0.18);
+}
+
+.dark {
+  --background: oklch(0.16 0.03 264);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.22 0.04 264);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.22 0.04 264);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: var(--gold);
+  --primary-foreground: oklch(0.18 0.04 264);
+  --secondary: oklch(0.28 0.05 264);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.28 0.05 264);
+  --muted-foreground: oklch(0.7 0.03 257);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.18 0.04 264);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-gold { background-image: var(--gradient-gold); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .text-gold { color: var(--gold); }
+  .bg-azure { background-color: var(--azure); }
+  .bg-royal { background-color: var(--royal-blue); }
+}
