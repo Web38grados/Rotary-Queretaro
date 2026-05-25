@@ -47,29 +47,45 @@ function Home() {
       {/* PILARES */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { icon: Heart, title: "Paz", text: "Fomentamos la paz y la prevención de conflictos en cada acción." },
-            { icon: Users, title: "Liderazgo", text: "Formamos líderes que inspiran a sus comunidades." },
-            { icon: Globe2, title: "Servicio Global", text: "La amistad como ocasión de servir, dentro y fuera de México." },
-          ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="group p-8 rounded-2xl bg-card border border-border shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all">
-              <div className="size-14 rounded-xl bg-gradient-gold grid place-items-center mb-6 text-accent-foreground">
-                <Icon size={26} />
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-2">{title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{text}</p>
-            </div>
-          ))}
-        </div>
+  {[
+    { icon: Heart, title: "Paz", text: "Fomentamos la paz y la prevención de conflictos en cada acción." },
+    { icon: Users, title: "Liderazgo", text: "Formamos líderes que inspiran a sus comunidades." },
+    { icon: Globe2, title: "Servicio Global", text: "La amistad como ocasión de servir, dentro y fuera de México." },
+  ].map(({ icon: Icon, title, text }) => (
+    <div
+      key={title}
+      className="group p-8 rounded-2xl bg-card border border-border shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all"
+    >
+      <div className="size-14 rounded-xl bg-gradient-gold grid place-items-center mb-6 text-accent-foreground">
+        <Icon size={26} />
+      </div>
+      <h3 className="text-2xl font-bold text-primary mb-2">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed">{text}</p>
+    </div>
+  ))}
+</div>
+
+<div className="mt-8 flex justify-end">
+  <Link
+    to="/quienes-somos"
+    className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+  >
+    Conoce quiénes somos <ArrowRight size={16} />
+  </Link>
+</div>
+
+        
       </section>
 
       {/* CAMPAÑA DESTACADA */}
-      <section className="bg-cloud/40">
+      <section className="bg-cloud/20">
         <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <span className="text-xs font-bold uppercase tracking-widest text-cranberry">Campaña activa</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-cranberry">
+                   Campaña activa
+            </span>
             <h2 className="mt-3 text-4xl md:text-5xl font-display font-bold text-primary">
-              End Polio Now
+              Fin a la Poliomielitis (End Polio Now)
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Hace casi 40 años Rotary lidera la lucha global por erradicar la poliomielitis. Hoy estamos a un paso de lograrlo. Cada contribución cuenta.
@@ -94,7 +110,7 @@ function Home() {
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-cranberry">Qué hacemos</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-cranberry">Qué hacemos</span>
             <h2 className="mt-3 text-4xl md:text-5xl font-display font-bold text-primary">Impacto que perdura</h2>
           </div>
           <Link to="/proyectos" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
@@ -134,9 +150,23 @@ function Home() {
             <p className="mt-6 text-lg opacity-90">
               Conecta con personas que comparten el deseo de generar un cambio real. Te invitamos a sesionar con nosotros.
             </p>
-            <Link to="/contacto" className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-accent-foreground font-bold shadow-elegant hover:scale-105 transition-transform">
-              Contáctanos <ArrowRight size={18} />
-            </Link>
+            <div className="mt-10">
+  <Link
+    to="/contacto"
+    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-accent-foreground font-bold shadow-elegant hover:scale-105 transition-transform"
+  >
+    Contáctanos <ArrowRight size={18} />
+  </Link>
+
+  <div className="mt-5">
+    <Link
+      to="/involucrate"
+      className="inline-flex items-center gap-2 text-primary-foreground/90 font-medium hover:gap-3 transition-all"
+    >
+      Conoce cómo involucrarte <ArrowRight size={16} />
+    </Link>
+  </div>
+</div>
           </div>
         </div>
       </section>

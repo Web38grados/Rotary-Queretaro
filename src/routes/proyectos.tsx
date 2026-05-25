@@ -31,7 +31,7 @@ function Page() {
         <article>
           <div className="flex items-end justify-between flex-wrap gap-4 mb-8">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-cranberry">Proyecto permanente</span>
+              <span className="text-sm font-semibold uppercase tracking-wide text-cranberry">Proyecto permanente</span>
               <h2 className="mt-2 text-4xl font-display font-bold text-primary">Sierra Tarahumara</h2>
               <p className="mt-3 text-muted-foreground max-w-2xl">Acompañamos a las comunidades rarámuri con apoyo continuo en salud, educación y necesidades básicas.</p>
             </div>
@@ -55,7 +55,7 @@ function Page() {
             <img src={printerImg} alt="Donación de impresora" className="w-full h-full object-cover" />
           </div>
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-cranberry">Bienio 2025 — 2026</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-cranberry">Bienio 2025 — 2026</span>
             <h2 className="mt-2 text-4xl font-display font-bold text-primary">Proyecto destacado del bienio</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Una iniciativa con impacto directo en nuestra comunidad, desarrollada con aliados estratégicos y la energía de cada socio del club.

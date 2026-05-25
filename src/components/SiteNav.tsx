@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoRotary from "@/assets/logo-rotary.png";
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -17,15 +18,13 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="size-10 rounded-full bg-gradient-gold grid place-items-center font-display font-black text-primary-foreground text-lg shadow-card">
-            R
-          </div>
-          <div className="leading-tight">
-            <div className="font-display font-bold text-base text-primary">Rotary</div>
-            <div className="text-[11px] uppercase tracking-widest text-muted-foreground">San Miguel Chapultepec</div>
-          </div>
-        </Link>
+        <Link to="/" className="flex items-center">
+  <img
+    src={logoRotary}
+    alt="Rotary San Miguel Chapultepec"
+    className="h-12 w-auto"
+  />
+</Link>
 
         <nav className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
