@@ -151,22 +151,17 @@ function Home() {
               Conecta con personas que comparten el deseo de generar un cambio real. Te invitamos a sesionar con nosotros.
             </p>
             <div className="mt-10">
-  <Link
+    <Link
     to="/contacto"
     className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-accent-foreground font-bold shadow-elegant hover:scale-105 transition-transform"
-  >
-    Contáctanos <ArrowRight size={18} />
-  </Link>
+   >
+    Conoce cómo involucrarte <ArrowRight size={18} />
+   </Link>
 
-  <div className="mt-5">
-    <Link
-      to="/involucrate"
-      className="inline-flex items-center gap-2 text-primary-foreground/90 font-medium hover:gap-3 transition-all"
-    >
-      Conoce cómo involucrarte <ArrowRight size={16} />
-    </Link>
-  </div>
-</div>
+   <div className="mt-5">
+    
+    </div>
+   </div>
           </div>
         </div>
       </section>
