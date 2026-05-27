@@ -1,20 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail } from "lucide-react";
+import logoRotary from "@/assets/logo-rotary1.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground mt-24">
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="size-10 rounded-full bg-gradient-gold grid place-items-center font-display font-black text-primary text-lg">
-              R
-            </div>
-            <div>
-              <div className="font-display font-bold">Rotary</div>
-              <div className="text-xs uppercase tracking-widest opacity-70">San Miguel Chapultepec</div>
-            </div>
-          </div>
+          <img
+             src={logoRotary}
+               alt="Rotary San Miguel Chapultepec"
+               className="h-40 w-auto object-contain"/>
           <p className="text-sm opacity-80 max-w-xs">
             Fundado en 2006 · Registro 73285. Asociación Civil mexicana y donataria autorizada.
           </p>

@@ -65,14 +65,13 @@ function Home() {
   ))}
 </div>
 
-<div className="mt-8 flex justify-end">
-  <Link
-    to="/quienes-somos"
-    className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-  >
-    Conoce quiénes somos <ArrowRight size={16} />
-  </Link>
-</div>
+      <div className="mt-8 flex justify-end">
+        <Link
+           to="/quienes-somos"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+              Conoce quiénes somos <ArrowRight size={16} />
+               </Link>
+                </div>
 
         
       </section>
