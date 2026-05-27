@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoRotary from "@/assets/logo-rotary.png";
+import logoRotary from "@/assets/logo-queretaro.webp";
+
+
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -22,7 +24,7 @@ export function SiteNav() {
   <img
     src={logoRotary}
     alt="Rotary San Miguel Chapultepec"
-    className="h-12 w-auto"
+    className="h-30 w-auto"
   />
 </Link>
 

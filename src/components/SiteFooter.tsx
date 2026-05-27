@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail } from "lucide-react";
-import logoRotary from "@/assets/logo-rotary1.png";
+import logoRotary from "@/assets/logo-queretaro.webp";
+
 
 export function SiteFooter() {
   return (
