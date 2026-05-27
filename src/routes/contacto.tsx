@@ -6,8 +6,8 @@ import { CheckCircle2, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto · Rotary San Miguel Chapultepec" },
-      { name: "description", content: "Contacta al Club Rotario San Miguel Chapultepec. Sesionamos en el Centro Asturiano de México, Polanco." },
+      { title: "Contacto · Rotary Querétaro Internacional" },
+      { name: "description", content: "Contacta al Club Rotario Querétaro Internacional. Sesionamos en el Centro Asturiano de México, Polanco." },
     ],
   }),
   component: Page,

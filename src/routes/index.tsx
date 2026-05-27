@@ -8,11 +8,14 @@ import { ArrowRight, Heart, Users, Globe2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Rotary San Miguel Chapultepec · Servir para cambiar vidas" },
-      { name: "description", content: "Club Rotario San Miguel Chapultepec. Fundado en 2006. Construimos paz, liderazgo y servicio en México y el mundo." },
-    ],
-  }),
+  meta: [
+    { title: "Club Rotario Querétaro Internacional" },
+    {
+      name: "description",
+      content:
+        "Club Rotario Querétaro Internacional. Construimos paz, liderazgo y servicio en México y el mundo.",},
+   ],
+   }),
   component: Home,
 });
 
@@ -31,7 +34,7 @@ function Home() {
             Servir <span className="text-gold italic">antes</span> que uno mismo.
           </h1>
           <p className="mt-8 text-lg md:text-xl max-w-2xl opacity-90 leading-relaxed">
-            Somos el Club Rotario de San Miguel Chapultepec. Una comunidad que se une para tomar acción y generar un cambio perdurable — en nosotros, en nuestras comunidades y en el mundo entero.
+            Somos el Club Rotario de Querétaro Internacional. Una comunidad que se une para tomar acción y generar un cambio perdurable — en nosotros, en nuestras comunidades y en el mundo entero.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/involucrate" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-gold text-accent-foreground font-semibold shadow-elegant hover:scale-105 transition-transform">
