@@ -23,7 +23,7 @@ export function SiteNav() {
         <Link to="/" className="flex items-center">
   <img
     src={logoRotary}
-    alt="Rotary San Miguel Chapultepec"
+    alt="Rotary Querétaro Internacional"
     className="h-30 w-auto"
   />
 </Link>

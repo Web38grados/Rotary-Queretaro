@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail } from "lucide-react";
-import logoRotary from "@/assets/logo-queretaro.webp";
+import logoRotary from "@/assets/club-queretaro1.png";
 
 
 export function SiteFooter() {
@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div>
           <img
              src={logoRotary}
-               alt="Rotary San Miguel Chapultepec"
+               alt="Club Rotario Querétaro Internacional"
                className="h-40 w-auto object-contain"/>
           <p className="text-sm opacity-80 max-w-xs">
             Fundado en 2006 · Registro 73285. Asociación Civil mexicana y donataria autorizada.
@@ -45,7 +45,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="max-w-7xl mx-auto px-6 py-5 text-xs opacity-60 flex flex-col md:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} Club Rotario San Miguel Chapultepec.</span>
+          <span>© {new Date().getFullYear()} Club Rotario Querétaro Internacional.</span>
           <span>Servicio antes que uno mismo.</span>
         </div>
       </div>

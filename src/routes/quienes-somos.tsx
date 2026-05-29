@@ -4,15 +4,15 @@ import { Layout } from "@/components/Layout";
 export const Route = createFileRoute("/quienes-somos")({
   head: () => ({
     meta: [
-      { title: "Quiénes Somos · Rotary Querétaro Internacional" },
-      { name: "description", content: "Historia y legado del Club Rotario Querétaro Internacional, fundado en 2006." },
+      { title: "Quiénes Somos · Rotario San Miguel Chapultepec" },
+      { name: "description", content: "Historia y legado del Club Rotario San Miguel Chapultepec, fundado en 2006." },
     ],
   }),
   component: Page,
 });
 
 const timeline = [
-  { year: "2006", title: "Fundación del club", text: "Nace el Club Rotario Querétaro Internacional con el registro 73285 ante Rotary International." },
+  { year: "2006", title: "Fundación del club", text: "Nace el Club Rotario San Miguel Chapultepec con el registro 73285 ante Rotary International." },
   { year: "2010", title: "Donataria autorizada", text: "Obtenemos el reconocimiento como donataria autorizada en México." },
   { year: "2015", title: "Sierra Tarahumara", text: "Iniciamos un programa permanente de apoyo a comunidades rarámuri." },
   { year: "2020", title: "Sesiones híbridas", text: "Adoptamos el modelo presencial + Zoom para fortalecer la participación." },
@@ -27,7 +27,7 @@ function Page() {
           <span className="text-sm font-semibold uppercase tracking-wide text-gold">Nuestra historia</span>
           <h1 className="mt-3 text-5xl md:text-6xl font-display font-bold">Quiénes somos</h1>
           <p className="mt-8 text-lg md:text-xl opacity-90 leading-relaxed max-w-3xl">
-            El Club Rotario de Querétaro Internacional, fundado en 2006 con número de registro 73285, es un club de Rotary International dedicado a fomentar la paz, el liderazgo, y ver la amistad como ocasión de servir. Juntos construimos un mundo donde las personas se unen y toman acción para generar un cambio perdurable en nosotros mismos, en nuestras comunidades y en el mundo entero.
+            El Club Rotario San Miguel Chapultepec, fundado en 2006 con número de registro 73285, es un club de Rotary International dedicado a fomentar la paz, el liderazgo, y ver la amistad como ocasión de servir. Juntos construimos un mundo donde las personas se unen y toman acción para generar un cambio perdurable en nosotros mismos, en nuestras comunidades y en el mundo entero.
           </p>
           <p className="mt-6 text-base opacity-80 max-w-3xl">
             Nuestro club está constituido como Asociación Civil en México y cuenta con registro como donataria autorizada.
