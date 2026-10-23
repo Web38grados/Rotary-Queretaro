@@ -5,6 +5,7 @@ import polioImg from "@/assets/polio-projection.jpg";
 import tarahumaraImg from "@/assets/tarahumara-1.jpg";
 import communityImg from "@/assets/community-event.jpg";
 import { ArrowRight, Heart, Users, Globe2 } from "lucide-react";
+import Hero from "@/components/Hero";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,30 +23,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <Layout>
-      {/* HERO */}
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
-        <img src={heroImg} alt="Miembros del Club Rotario en ceremonia" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-primary-foreground">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 border border-gold/40 backdrop-blur text-gold text-xs font-semibold uppercase tracking-widest mb-8">
-            <span className="size-1.5 rounded-full bg-gold" /> Fundado en 2006 · Registro 73285
-          </div>
-          <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl">
-            Servir <span className="text-gold italic">antes</span> que uno mismo.
-          </h1>
-          <p className="mt-8 text-lg md:text-xl max-w-2xl opacity-90 leading-relaxed">
-            Somos el Club Rotario San Miguel Chapultepec. Una comunidad que se une para tomar acción y generar un cambio perdurable — en nosotros, en nuestras comunidades y en el mundo entero.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/involucrate" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-gold text-accent-foreground font-semibold shadow-elegant hover:scale-105 transition-transform">
-              Únete al club <ArrowRight size={18} />
-            </Link>
-            <Link to="/proyectos" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-primary-foreground/40 text-primary-foreground font-semibold hover:bg-primary-foreground/10 transition-colors">
-              Ver proyectos
-            </Link>
-          </div>
-        </div>
-      </section>
+      
+      <Hero></Hero>
+
 
       {/* PILARES */}
       <section className="max-w-7xl mx-auto px-6 py-24">
