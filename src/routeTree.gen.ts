@@ -9,37 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
-import { Route as ProyectosRouteImport } from './routes/proyectos'
-import { Route as InvolucrateRouteImport } from './routes/involucrate'
-import { Route as EventosRouteImport } from './routes/eventos'
-import { Route as ContactoRouteImport } from './routes/contacto'
-import { Route as AniversarioRouteImport } from './routes/aniversario'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AniversarioRouteImport } from './routes/aniversario'
+import { Route as ConcursoFotografiaRouteImport } from './routes/concurso-fotografia'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as InvolucrateRouteImport } from './routes/involucrate'
+import { Route as ProyectosRouteImport } from './routes/proyectos'
+import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 
-const QuienesSomosRoute = QuienesSomosRouteImport.update({
-  id: '/quienes-somos',
-  path: '/quienes-somos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProyectosRoute = ProyectosRouteImport.update({
-  id: '/proyectos',
-  path: '/proyectos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InvolucrateRoute = InvolucrateRouteImport.update({
-  id: '/involucrate',
-  path: '/involucrate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventosRoute = EventosRouteImport.update({
-  id: '/eventos',
-  path: '/eventos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactoRoute = ContactoRouteImport.update({
-  id: '/contacto',
-  path: '/contacto',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AniversarioRoute = AniversarioRouteImport.update({
@@ -47,15 +28,41 @@ const AniversarioRoute = AniversarioRouteImport.update({
   path: '/aniversario',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ConcursoFotografiaRoute = ConcursoFotografiaRouteImport.update({
+  id: '/concurso-fotografia',
+  path: '/concurso-fotografia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventosRoute = EventosRouteImport.update({
+  id: '/eventos',
+  path: '/eventos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvolucrateRoute = InvolucrateRouteImport.update({
+  id: '/involucrate',
+  path: '/involucrate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProyectosRoute = ProyectosRouteImport.update({
+  id: '/proyectos',
+  path: '/proyectos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuienesSomosRoute = QuienesSomosRouteImport.update({
+  id: '/quienes-somos',
+  path: '/quienes-somos',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aniversario': typeof AniversarioRoute
+  '/concurso-fotografia': typeof ConcursoFotografiaRoute
   '/contacto': typeof ContactoRoute
   '/eventos': typeof EventosRoute
   '/involucrate': typeof InvolucrateRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aniversario': typeof AniversarioRoute
+  '/concurso-fotografia': typeof ConcursoFotografiaRoute
   '/contacto': typeof ContactoRoute
   '/eventos': typeof EventosRoute
   '/involucrate': typeof InvolucrateRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aniversario': typeof AniversarioRoute
+  '/concurso-fotografia': typeof ConcursoFotografiaRoute
   '/contacto': typeof ContactoRoute
   '/eventos': typeof EventosRoute
   '/involucrate': typeof InvolucrateRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aniversario'
+    | '/concurso-fotografia'
     | '/contacto'
     | '/eventos'
     | '/involucrate'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aniversario'
+    | '/concurso-fotografia'
     | '/contacto'
     | '/eventos'
     | '/involucrate'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aniversario'
+    | '/concurso-fotografia'
     | '/contacto'
     | '/eventos'
     | '/involucrate'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AniversarioRoute: typeof AniversarioRoute
+  ConcursoFotografiaRoute: typeof ConcursoFotografiaRoute
   ContactoRoute: typeof ContactoRoute
   EventosRoute: typeof EventosRoute
   InvolucrateRoute: typeof InvolucrateRoute
@@ -123,39 +136,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/quienes-somos': {
-      id: '/quienes-somos'
-      path: '/quienes-somos'
-      fullPath: '/quienes-somos'
-      preLoaderRoute: typeof QuienesSomosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/proyectos': {
-      id: '/proyectos'
-      path: '/proyectos'
-      fullPath: '/proyectos'
-      preLoaderRoute: typeof ProyectosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/involucrate': {
-      id: '/involucrate'
-      path: '/involucrate'
-      fullPath: '/involucrate'
-      preLoaderRoute: typeof InvolucrateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/eventos': {
-      id: '/eventos'
-      path: '/eventos'
-      fullPath: '/eventos'
-      preLoaderRoute: typeof EventosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contacto': {
-      id: '/contacto'
-      path: '/contacto'
-      fullPath: '/contacto'
-      preLoaderRoute: typeof ContactoRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aniversario': {
@@ -165,11 +150,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AniversarioRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/concurso-fotografia': {
+      id: '/concurso-fotografia'
+      path: '/concurso-fotografia'
+      fullPath: '/concurso-fotografia'
+      preLoaderRoute: typeof ConcursoFotografiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventos': {
+      id: '/eventos'
+      path: '/eventos'
+      fullPath: '/eventos'
+      preLoaderRoute: typeof EventosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/involucrate': {
+      id: '/involucrate'
+      path: '/involucrate'
+      fullPath: '/involucrate'
+      preLoaderRoute: typeof InvolucrateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proyectos': {
+      id: '/proyectos'
+      path: '/proyectos'
+      fullPath: '/proyectos'
+      preLoaderRoute: typeof ProyectosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quienes-somos': {
+      id: '/quienes-somos'
+      path: '/quienes-somos'
+      fullPath: '/quienes-somos'
+      preLoaderRoute: typeof QuienesSomosRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AniversarioRoute: AniversarioRoute,
+  ConcursoFotografiaRoute: ConcursoFotografiaRoute,
   ContactoRoute: ContactoRoute,
   EventosRoute: EventosRoute,
   InvolucrateRoute: InvolucrateRoute,
@@ -187,13 +208,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

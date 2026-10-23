@@ -1,5 +1,6 @@
-import { SiteNav } from "./SiteNav";
+
 import { SiteFooter } from "./SiteFooter";
+import SiteNav from "./SiteNav";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
